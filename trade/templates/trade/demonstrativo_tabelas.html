@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Define o título da página -->
+    <title>Demonstrativo das Tabelas</title>
+    <!-- Define a viewport para que a página seja responsiva -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- Carrega as tags de template do Django para arquivos estáticos -->
+    {% load static %}
+    <!-- Inclui o arquivo CSS principal para estilização -->
+    <link rel='stylesheet' type='text/css' href="{% static 'css/principal.css' %}">
+</head>
+<body>
+    <div class="tabelas">
+    <!-- Cabeçalho da página -->
+    <h1>Demonstrativo das Tabelas</h1>
+    <!-- Seção para exibir a lista de clientes -->
+    <div class="tabela">
+    <div>
+        <h2>Clientes</h2>
+    <ul>
+        {% for cliente in clientes %}
+        <!-- Lista cada cliente com seu nome e código -->
+        <li>{{ cliente.nomecli }} - {{ cliente.codcli }}</li>
+        {% endfor %}
+    </ul>
+    </div>
+
+    <!-- Seção para exibir a lista de fornecedores -->
+    <div>
+        <h2>Fornecedores</h2>
+    <ul>
+        {% for fornecedor in fornecedores %}
+        <!-- Lista cada fornecedor com seu nome e código -->
+        <li>{{ fornecedor.nomeforn }} - {{ fornecedor.codiforn }}</li>
+        {% endfor %}
+    </ul>
+    </div>
+
+    <!-- Seção para exibir a lista de produtos -->
+    <div>
+        <h2>Produtos</h2>
+    <ul>
+        {% for produto in produtos %}
+        <!-- Lista cada produto com sua descrição e código -->
+        <li>{{ produto.descprod }} - {{ produto.codiprod }}</li>
+        {% endfor %}
+    </ul>
+    </div>
+
+    <!-- Seção para exibir a lista de vendas -->
+    <div>
+        <h2>Vendas</h2>
+    <ul>
+        {% for venda in vendas %}
+        <!-- Lista cada venda com seu código e valor -->
+        <li>{{ venda.codivend }} - {{ venda.valorvend }}</li>
+        {% endfor %}
+    </ul>
+    </div>
+    </div>
+
+    <!-- Link para voltar à página inicial -->
+    <a class="footer" href="{% url 'home' %}">Voltar para Home</a>
+    </div>
+</body>
+</html>

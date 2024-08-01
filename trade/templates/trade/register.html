@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Define a codificação de caracteres para UTF-8 -->
+    <meta charset="UTF-8">
+    <!-- Define a viewport para que a página seja responsiva -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- Carrega as tags de template do Django para arquivos estáticos -->
+    {% load static %}
+    <!-- Inclui o arquivo CSS principal para estilização -->
+    <link rel='stylesheet' type='text/css' href="{% static 'css/register.css' %}">
+    <!-- Define o título da página -->
+    <title>Registro</title>
+</head>
+<body>
+    <!-- Container principal da página -->
+    <div class="container mt-5">
+        <!-- Cabeçalho da seção de registro -->
+        <h1>Registro</h1>
+        <!-- Formulário para registro de usuário -->
+        <div class="formulario">
+        <form method="post" class="form-group">
+            <!-- Protege o formulário contra CSRF (Cross-Site Request Forgery) -->
+            {% csrf_token %}
+            <!-- Renderiza o formulário Django como parágrafos -->
+            {{ form.as_p }}
+            <!-- Botão para submeter o formulário -->
+            <button type="submit" class="btn btn-primary">Registrar</button>
+        </form>
+        <!-- Link para redirecionar para a página de login -->
+        <p>Já possui uma conta?<a href="{% url 'login' %}">Faça o login</a>.</p>
+        </div>
+        </div>
+    <!-- Scripts para funcionamento do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

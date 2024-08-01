@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Define o conjunto de caracteres para a página -->
+    <meta charset="UTF-8">
+    <!-- Define o título da página -->
+    <title>Login</title>
+    <!-- Define a viewport para que a página seja responsiva -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- Carrega as tags de template do Django para arquivos estáticos -->
+    {% load static %}
+    <!-- Inclui o arquivo CSS principal para estilização adicional -->
+    <link rel='stylesheet' type='text/css' href="{% static 'css/login.css' %}">
+</head>
+<body>
+    <div class="cabecalho">
+    <img src="{% static '/images/tradeagile.png' %}">
+    <div class="container mt-5">
+        <!-- Cabeçalho da página -->
+        <h1>Login</h1>
+        <!-- Formulário de login -->
+        <form style="font-family: 'Roboto Light'" method="post" class="form-group">
+            <!-- Protege o formulário contra CSRF (Cross-Site Request Forgery) -->
+            {% csrf_token %}
+            <!-- Renderiza os campos do formulário -->
+            {{ form.as_p }}
+            <!-- Botão de envio do formulário -->
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+        <!-- Link para a página de registro -->
+        <p style="font-family: 'Roboto Light'">Não possui uma conta? <a href="{% url 'register' %}">Registrar</a>.</p>
+    </div>
+    <!-- Scripts necessários para o funcionamento do Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </div>
+</body>
+</html>

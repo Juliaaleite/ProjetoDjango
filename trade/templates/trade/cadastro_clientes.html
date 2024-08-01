@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadastro de Clientes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/principal.css' %}">
+</head>
+<body>
+    <h1>Cadastro de Clientes</h1>
+    <div class="form1">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <br><br>
+            <center><button type="submit">Cadastrar</button></center>
+        </form>
+    </div>
+    <br>
+    <a href="{% url 'home' %}">Voltar para Home</a>
+</body>
+</html>

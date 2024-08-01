@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Galeria de Produtos</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    {% load static %}
+    <link rel='stylesheet' type='text/css' href="{% static 'css/galeria.css' %}">
+</head>
+<body>
+    <h1>Galeria de Produtos</h1>
+    <a  href="{% url 'home' %}">Voltar para Home</a>
+    <div class="img-hover-zoom">
+    <p>RAÇÕES</p>
+    <img src="{% static 'images/Ração1.png' %}" alt="Imagem da Galeria" class="img-galeria">
+    <img src="{% static 'images/Ração2.png' %}" alt="Imagem da Galeria" class="img-galeria">
+    <img src="{% static 'images/Ração3.png' %}" alt="Imagem da Galeria" class="img-galeria">
+    <img src="{% static 'images/Ração4.png' %}" alt="Imagem da Galeria" class="img-galeria">
+    </div>
+     <div class="img-hover-zoom">
+    <p>MEDICAMENTOS</p>
+    <img src="{% static 'images/Remédio1.png' %}" alt="Imagem da Galeria" class="img-galeria">
+    <img src="{% static 'images/Remédio2.png' %}" alt="Imagem da Galeria" class="img-galeria">
+    <img src="{% static 'images/Remédio3.png' %}" alt="Imagem da Galeria" class="img-galeria">
+    <img src="{% static 'images/Remédio4.png' %}" alt="Imagem da Galeria" class="img-galeria">
+     </div>
+     <div class="img-hover-zoom">
+    <p>HIGIENE</p>
+    <img src="{% static 'images/Tapete1.png' %}" alt="Imagem da Galeria" class="img-galeria">
+    <img src="{% static 'images/Tapete2.png' %}" alt="Imagem da Galeria" class="img-galeria">
+    <img src="{% static 'images/Areia1.png' %}" alt="Imagem da Galeria" class="img-galeria">
+    <img src="{% static 'images/Areia2.png' %}" alt="Imagem da Galeria" class="img-galeria">
+     </div>
+     <div class="img-hover-zoom">
+    <p>CASAS</p>
+    <img src="{% static 'images/Casa1.png' %}" alt="Imagem da Galeria" class="img-galeria">
+    <img src="{% static 'images/Casa2.png' %}" alt="Imagem da Galeria" class="img-galeria">
+    <img src="{% static 'images/Casa3.png' %}" alt="Imagem da Galeria" class="img-galeria">
+    <img src="{% static 'images/Casa4.png' %}" alt="Imagem da Galeria" class="img-galeria">
+     </div>
+     <div class="img-hover-zoom">
+    <p>BRINQUEDOS</p>
+    <img src="{% static 'images/Brinquedo1.png' %}" alt="Imagem da Galeria" class="img-galeria">
+    <img src="{% static 'images/Brinquedo2.png' %}" alt="Imagem da Galeria" class="img-galeria">
+    <img src="{% static 'images/Brinquedo3.png' %}" alt="Imagem da Galeria" class="img-galeria">
+    <img src="{% static 'images/Brinquedo4.png' %}" alt="Imagem da Galeria" class="img-galeria">
+    </div>
+
+</body>
+</html>
+

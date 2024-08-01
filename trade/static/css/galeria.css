@@ -1,0 +1,46 @@
+body{
+    background-color: #9EB9CC;
+    font-family: "Roboto Light";
+}
+h1 {
+    background-color: #1e5e8b;
+    color: #ffc23a;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky; /* Faz o cabeçalho ficar fixo na parte superior */
+    top: 0; /* Define que o cabeçalho deve ficar fixo no topo da página */
+    z-index: 100; /* Garante que o cabeçalho fique acima de outros conteúdos */
+    font-family: "Roboto Light";
+}
+
+img {
+    width: 300px;
+    height: 350px;
+    margin-left: 7%;
+    border: solid 4px #1E5E8B;
+    border-radius: 15px;
+}
+p {
+    font-family: "Roboto Light";
+    font-size: 30px;
+    color: #1E5E8B;
+}
+.img-hover-zoom img:hover {
+  transform: scale(1.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Estilização dos links de navegação */
+a {
+    align-content: center;
+    display: inline-block; /* Faz com que os links se comportem como blocos inline */
+    color:#1E5E8B; /* Cor do texto dos links */
+    padding: 10px 20px; /* Preenchimento interno para dar espaço ao redor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    font-size: 28px;
+}
+/* Altera a cor de fundo ao passar o mouse sobre um link */
+a:hover {
+    background-color: #ffc23a;
+}
+

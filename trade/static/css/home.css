@@ -1,0 +1,49 @@
+body {
+    font-family: "Roboto Light";
+    margin: 0;
+    padding: 0;
+    background-image: url("../images/quadro8.png");
+    background-attachment: fixed;
+        background-size: cover;
+}
+
+/* Estilização para o cabeçalho com o menu fixo */
+h1 {
+    background-color: #1e5e8b;
+    color: #ffc23a;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky; /* Faz o cabeçalho ficar fixo na parte superior */
+    top: 0; /* Define que o cabeçalho deve ficar fixo no topo da página */
+    z-index: 100; /* Garante que o cabeçalho fique acima de outros conteúdos */
+}
+
+/* Estilização dos links de navegação */
+a {
+    align-content: center;
+    display: inline-block; /* Faz com que os links se comportem como blocos inline */
+    color: #1e5e8b; /* Cor do texto dos links */
+    padding: 10px 20px; /* Preenchimento interno para dar espaço ao redor do texto */
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+}
+
+.container {
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Altera a cor de fundo ao passar o mouse sobre um link */
+a:hover {
+    background-color: #ffc23a;
+}
+
+.cabecalho{
+    text-align: center;
+}
+.cabecalho img{
+     margin-top: 1%;
+     width: 10%;
+     height: 10%;
+     border-radius: 20px;
+ }
+

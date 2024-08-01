@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Define o título da página -->
+    <title>Trade.Agile - Home</title>
+    <!-- Define a viewport para que a página seja responsiva -->
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- Carrega as tags de template do Django para arquivos estáticos -->
+    {% load static %}
+    <!-- Inclui o arquivo CSS principal para estilização -->
+    <link rel='stylesheet' type='text/css' href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <div class="cabecalho">
+
+    <!-- Cabeçalho da página -->
+    <h1>Bem-vindo à Trade.Agile</h1>
+    <!-- Links para diferentes seções do site -->
+    </div>
+    <div class="container">
+    <a href="{% url 'cadastro_clientes' %}">Cadastro de Clientes</a>
+    <a href="{% url 'demonstrativo_tabelas' %}">Demonstrativo das Tabelas</a>
+    <a href="{% url 'galeria_produtos' %}">Galeria de Produtos</a>
+    <a href="{% url 'realizar_venda' %}">Realizar Venda</a><br><br><br><br><br><br>
+        <img src="{% static '/images/banner.png' %}">
+    </div>
+</body>
+</html>
+
